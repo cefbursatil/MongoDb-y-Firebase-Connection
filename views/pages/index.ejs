@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs')%>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 style="color:aliceblue">Ingrese producto</h1>
+            <form id="form" action="productos/agregar" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="name" style="color:aliceblue">Nombre: </label>
+                    <input type="text" class="form-control" placeholder="Nombre del producto" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="description" style="color:aliceblue">Descripcion: </label>
+                    <input type="text" class="form-control" placeholder="Descripcion del producto" name="description" id="description">
+                </div>
+                <div class="form-group">
+                    <label for="code" style="color:aliceblue">Codigo: </label>
+                    <input type="number" class="form-control" placeholder="Codigo del producto" name="code" id="code">
+                </div>
+                <div class="form-group">
+                    <label for="thumbnail" style="color:aliceblue">Foto del producto: </label>
+                    <input type="text" class="form-control" placeholder="Link icono del producto" name="thumbnail" id="thumbnail">
+                </div>
+                <div class="form-group">
+                    <label for="price" style="color:aliceblue">Precio: </label>
+                    <input type="number" class="form-control" placeholder="Precio del producto" name="price" id="price">
+                </div>    
+                <div class="form-group">
+                    <label for="price" style="color:aliceblue">Stock: </label>
+                    <input type="number" class="form-control" placeholder="Stock del producto" name="stock" id="stock">
+                </div>
+                
+                <input type="submit" value="Enviar">
+            </form>
+
+            <hr>
+
+            <hr>
+
+            <h1 style="color:aliceblue">Centro de mensajes</h1>
+            <div class="messages" style= "color: brown" id="message-center">
+            </div>
+            <form id="form" action="mensaje/enviar" method="POST" enctype="application/x-www-form-urlencoded">
+                <input type="text" id="email" name="email" placeholder="Tu email">
+                <input type="text" id="message" name="message" placeholder="Dinos algo...">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </body>
+</html>
